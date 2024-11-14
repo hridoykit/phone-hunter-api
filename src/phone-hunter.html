@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="container mx-auto py-1">
+      <h1 class="text-center font-bold text-4xl py-4">Phone Hunter</h1>
+    </header>
+
+    <main class="container mx-auto py-4 bg-slate-200">
+      <section
+        class="bg-slate-200 rounded flex flex-col items-center justify-center space-y-4 py-4"
+      >
+        <div class="space-x-2">
+          <input
+            id="phone-search-field"
+            class="bg-green-400 rounded-lg py-1 px-4 font-bold outline-none"
+            type="text"
+            placeholder="Search Phone"
+          />
+          <button
+            class="bg-green-400 px-4 py-1 rounded-lg text-white font-bold"
+            onclick="loadPhoneData()"
+          >
+            Load
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-center font-bold text-4xl">Hunting Phone API</h2>
+        <div id="phone-container"></div>
+        <!-- <div class="card bg-base-100 w-96 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Shoes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </main>
+
+    <script src="/src/phone-hunter.js"></script>
+  </body>
+</html>
