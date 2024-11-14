@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone Hunter</title>
-    <link href="./output.css" rel="stylesheet" />
+    <link href="output.css" rel="stylesheet" />
   </head>
   <body>
     <header class="container mx-auto py-1">
@@ -23,8 +23,9 @@
             placeholder="Search Phone"
           />
           <button
+            onclick="fetchPhoneData()"
+            id="load-btn"
             class="bg-green-400 px-4 py-1 rounded-lg text-white font-bold"
-            onclick="loadPhoneData()"
           >
             Load
           </button>
@@ -53,6 +54,6 @@
       </section>
     </main>
 
-    <script src="/src/phone-hunter.js"></script>
+    <script src="phone-hunter.js"></script>
   </body>
 </html>
