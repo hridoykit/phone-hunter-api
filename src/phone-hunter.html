@@ -11,21 +11,21 @@
       <h1 class="text-center font-bold text-4xl py-4">Phone Hunter</h1>
     </header>
 
-    <main class="container mx-auto py-4 bg-slate-200">
+    <main class="container mx-auto py-4">
       <section
-        class="bg-slate-200 rounded flex flex-col items-center justify-center space-y-4 py-4"
+        class="rounded flex flex-col items-center justify-center space-y-4 py-4"
       >
         <div class="space-x-2">
           <input
             id="phone-search-field"
-            class="bg-green-400 rounded-lg py-1 px-4 font-bold outline-none"
+            class="rounded-lg py-1 px-4 font-semibold outline outline-1 focus:outline-2 outline-lime-300"
             type="text"
             placeholder="Search Phone"
           />
           <button
-            onclick="fetchPhoneData()"
+            onclick="handleSearchField()"
             id="load-btn"
-            class="bg-green-400 px-4 py-1 rounded-lg text-white font-bold"
+            class="bg-lime-500 px-5 py-1 rounded-lg text-white font-bold"
           >
             Load
           </button>
@@ -34,7 +34,10 @@
 
       <section>
         <h2 class="text-center font-bold text-4xl">Hunting Phone API</h2>
-        <div id="phone-container"></div>
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-3 gap-12 p-4 place-items-center h-screen"
+        ></div>
         <!-- <div class="card bg-base-100 w-96 shadow-xl">
           <figure class="px-10 pt-10">
             <img
