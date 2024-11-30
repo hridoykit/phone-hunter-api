@@ -36,8 +36,21 @@
         <h2 class="text-center font-bold text-4xl">Hunting Phone API</h2>
         <div
           id="phone-container"
-          class="grid grid-cols-1 md:grid-cols-3 gap-12 p-4 place-items-center h-screen"
+          class="grid grid-cols-1 md:grid-cols-3 gap-12 p-4 place-items-center"
         ></div>
+
+        <div class="flex justify-center items-center py-4">
+          <button
+            id="show-all-btn"
+            class="bg-lime-500 px-10 py-1 rounded-lg text-white font-bold hidden"
+          >
+            Show All
+          </button>
+        </div>
+
+        <div class="">
+          <span class="loading loading-dots loading-lg"></span>
+        </div>
         <!-- <div class="card bg-base-100 w-96 shadow-xl">
           <figure class="px-10 pt-10">
             <img
