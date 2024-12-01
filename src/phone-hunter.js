@@ -1,11 +1,12 @@
 const loadPhoneData = async (searchText) =>{
+    // toggleSpinner(true);
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
     const phones = await res.json();
     showPhone(phones.data);
+    // toggleSpinner(false);
 };
 
 const showPhone = phones =>{
-    console.log(phones)
     const container = document.getElementById('phone-container');
 
     // clear previous items of container
@@ -20,7 +21,6 @@ const showPhone = phones =>{
     
     // limit to first 10 phones 
     phones = phones.slice(0, 9);
-    console.log(phones);
 
     phones.forEach(phone =>{
         // const li = document.createElement('li');
@@ -42,13 +42,25 @@ const showPhone = phones =>{
             `;
         container.appendChild(card);
     });
+    // Hide spinner after data fetching
+    toggleSpinner(false)
 };
 
 const handleSearchField = () =>{
+    toggleSpinner(true); //Show spinner before data fetching
     const inputValue = document.getElementById('phone-search-field').value;
-    // console.log(inputValue);
     loadPhoneData(inputValue);
 
     // clear input field
     document.getElementById('phone-search-field').value = "";
+};
+
+const toggleSpinner = (isLoading) =>{
+    const spinner = document.getElementById('spinner');
+    if(isLoading){
+        spinner.classList.remove('hidden');
+    }
+    else{
+        spinner.classList.add('hidden')
+    }
 };
